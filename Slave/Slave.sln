@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slave", "Slave\Slave.csproj", "{6C00E003-4D70-4ACD-86A3-B089DCFFCD9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C00E003-4D70-4ACD-86A3-B089DCFFCD9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C00E003-4D70-4ACD-86A3-B089DCFFCD9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C00E003-4D70-4ACD-86A3-B089DCFFCD9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C00E003-4D70-4ACD-86A3-B089DCFFCD9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3F00F11-DEED-4CF7-9B47-D31C7290946B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Master.Models.Jobs>
+@*passo il modello di jobs alla view*@
+
+@{
+    ViewData["Title"] = "Index";//dictionary chiave-valore che consente di passare valori da view a view o da controller a view
+}
+
+<form>
+    <input type="hidden" />
+    <input asp-action="Create" type="submit" value="Create New Job" class="btn btn-success" />
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Command)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Arguments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CronString)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Group)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GroupId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Command)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Arguments)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CronString)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Group.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Group.Id)
+                </td>
+                <td>
+                    <a style="color: coral;" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a style="color: crimson;" asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+                    <a class="bold" style="color: green;" asp-action="Run" asp-route-id="@item.Id">Run</a>
+                    @*| <a class="bold" style="color: red;" asp-action="Stop" asp-route-id="@item.Id">Stop</a>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
